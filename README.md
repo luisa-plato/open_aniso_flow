@@ -30,13 +30,13 @@ $\boldsymbol{\mathcal{E}} = \boldsymbol{I} + \varepsilon \boldsymbol{d} \otimes 
 - $\boldsymbol{d}\,$ is the so-called director which encodes the anisotropy.
 
 The system is equipped with the boundary conditions
-$$
+```math
 \begin{align*}
     \boldsymbol{v} = 0, \quad
     (\boldsymbol{\Lambda}(\boldsymbol{d}) (\mu \nabla c^{\pm} \pm F c^{\pm} \nabla \psi)) \cdot \boldsymbol{n} = 0, \quad \text{ and } \quad
     (\boldsymbol{\mathcal{E}}(\boldsymbol{d}) \nabla \psi ) \cdot \boldsymbol{n} = 0 \quad \text{ on } [0,T] \times \partial \Omega.
 \end{align*}
-$$
+```
 and solved through a linearization and fixed-point iteration in `run_experiment.py`.
 
 All other appearing parameters are constants, which can be chosen in the simulation,
