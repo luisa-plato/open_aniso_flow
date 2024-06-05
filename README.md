@@ -21,17 +21,16 @@ $$
     & &\text{ in } (0,T) \times \Omega
 \end{align}
 $$
-is implemented, where $\boldsymbol{\Lambda}(\boldsymbol{d}) = \boldsymbol{I} + \lambda \boldsymbol{d} \otimes \boldsymbol{d}$, 
-$\boldsymbol{\mathcal{E}} = \boldsymbol{I} + \varepsilon \boldsymbol{d} \otimes \boldsymbol{d}$ for $\lambda, \varepsilon > 0$,
+is implemented, where $\boldsymbol{\Lambda}(\boldsymbol{d}) = \boldsymbol{I} + \lambda \, \boldsymbol{d} \otimes \boldsymbol{d}\,$, 
+$\boldsymbol{\mathcal{E}} = \boldsymbol{I} + \varepsilon \, \boldsymbol{d} \otimes \boldsymbol{d}\, $ for $\lambda, \varepsilon > 0$,
 
 - $\boldsymbol{v}$ denotes the fluid's velocity field and $p$ the pressure,
 - $c^{\pm}$ are the densities of the positively and negatively charged particles, 
 - $\psi$ is the electric potential,
-- $\boldsymbol{d}$ is the so-called director which encodes the anisotropy.
+- $\boldsymbol{d}\,$ is the so-called director which encodes the anisotropy.
 
 The system is equipped with the boundary conditions
-$$
-    \boldsymbol{v} = 0, \quad (\boldsymbol{\Lambda}(\boldsymbol{d}) (\mu \nabla c^{\pm} \pm F c^{\pm} \nabla \psi)) \cdot \boldsymbol{n} = 0, \quad \text{and} \quad (\boldsymbol{\mathcal{E}}(\boldsymbol{d}) \nabla \psi ) \cdot \boldsymbol{n} = 0 \text{ on } [0,T] \times \partial \Omega.
+$$ \boldsymbol{v} = 0, \quad (\boldsymbol{\Lambda}(\boldsymbol{d}) (\mu \nabla c^{\pm} \pm F c^{\pm} \nabla \psi)) \cdot \boldsymbol{n} = 0, \quad \text{and} \quad (\boldsymbol{\mathcal{E}(\boldsymbol{d}) \nabla \psi ) \cdot \boldsymbol{n} = 0 \text{ on } [0,T] \times \partial \Omega.
 $$
 and solved through a linearization and fixed-point iteration in `run_experiment.py`.
 
