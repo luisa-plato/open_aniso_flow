@@ -1,13 +1,3 @@
-<script type="text/x-mathjax-config">
-MathJax.Hub.Register.StartupHook('TeX Jax Ready', function () {
-  MathJax.InputJax.TeX.prefilterHooks.Add(function (data) {
-    data.math = data.math.replace(/^% <!\[CDATA\[/, '').replace(/%\]\]>$/, '');
-  });
-});
-</script>
-<script type="text/javascript" id="MathJax-script" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/latest.js"></script>
-
-
 # Anisotropic flow simulation
 
 This code simulates a coupled, anistropic Navier-Stokes-Nernst-Planck-Poisson system. 
@@ -22,14 +12,14 @@ into the terminal.
 The coupled, anistropic Navier--Stokes--Nernst--Planck--Poisson system
 
 $$
-\begin{align*}
+\begin{align}
     \partial_t \boldsymbol{v} + (\boldsymbol{v} \cdot \nabla) \boldsymbol{v} - \nu \Delta \boldsymbol{v} + \nabla p &= B (c^+ - c^-) \nabla \psi \quad
     & &\text{ in } (0,T) \times \Omega\\
     \partial_t c^{\pm} + \nabla \cdot (c^{\pm} \boldsymbol{v}) - \nabla \cdot (\boldsymbol{\Lambda}(\boldsymbol{d}) (\mu \nabla c^{\pm} \pm F c^{\pm} \nabla \psi)) &= 0 \quad
     & &\text{ in } (0,T) \times \Omega\\
     \nabla \cdot (\boldsymbol{\mathcal{E}}(\boldsymbol{d}) \nabla \psi ) &= B( c^+ - c^-) \quad
     & &\text{ in } (0,T) \times \Omega
-\end{align*}
+\end{align}
 $$
 is implemented, where $\boldsymbol{\Lambda}(\boldsymbol{d}) = \boldsymbol{I} + \lambda \boldsymbol{d} \otimes \boldsymbol{d}$, 
 $\boldsymbol{\mathcal{E}} = \boldsymbol{I} + \varepsilon \boldsymbol{d} \otimes \boldsymbol{d}$ for $\lambda, \varepsilon > 0$,
@@ -41,9 +31,9 @@ $\boldsymbol{\mathcal{E}} = \boldsymbol{I} + \varepsilon \boldsymbol{d} \otimes 
 
 The system is equipped with the boundary conditions
 $$
-\begin{gather*}
+\begin{gather}
     \boldsymbol{v} = 0, \quad (\boldsymbol{\Lambda}(\boldsymbol{d}) (\mu \nabla c^{\pm} \pm F c^{\pm} \nabla \psi)) \cdot \boldsymbol{n} = 0, \quad \text{and} \quad (\boldsymbol{\mathcal{E}}(\boldsymbol{d}) \nabla \psi ) \cdot \boldsymbol{n} = 0 \text{ on } [0,T] \times \partial \Omega.
-\end{gather*}
+\end{gather}
 $$
 and solved through a linearization and fixed-point iteration in `run_experiment.py`.
 
