@@ -2,6 +2,7 @@
 
 #The hidden system file ./DS_Store is ignored.
 .DS_Store
+**/.DS_Store
 
 #The __pycache__ files are ignored
 __pycache__/
