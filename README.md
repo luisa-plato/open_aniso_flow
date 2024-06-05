@@ -18,7 +18,7 @@ The coupled, anistropic Navier-Stokes-Nernst-Planck-Poisson system
     \partial_t c^{\pm} + \nabla \cdot (c^{\pm} \boldsymbol{v}) - \nabla \cdot (\boldsymbol{\Lambda}(\boldsymbol{d}) (\mu \nabla c^{\pm} \pm F c^{\pm} \nabla \psi)) &= 0 \quad
     & &\text{ in } (0,T) \times \Omega\\
     \nabla \cdot (\boldsymbol{\mathcal{E}}(\boldsymbol{d}) \nabla \psi ) &= B( c^+ - c^-) \quad
-    & &\text{ in } (0,T) \times \Omega
+    & &\text{in } (0,T) \times \Omega
 \end{align*}
 ```
 is implemented, where $\boldsymbol{\Lambda}(\boldsymbol{d}) = \boldsymbol{I} + \lambda \boldsymbol{d} \otimes \boldsymbol{d}$, 
