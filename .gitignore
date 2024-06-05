@@ -1,0 +1,10 @@
+#This is the gitignore file.
+
+#The hidden system file ./DS_Store is ignored.
+.DS_Store
+
+#The __pycache__ files are ignored
+__pycache__/
+common/__pycache__/
+problems/__pycache__/
+solvers/__pycache__/
