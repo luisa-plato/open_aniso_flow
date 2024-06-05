@@ -31,11 +31,9 @@ $\boldsymbol{\mathcal{E}} = \boldsymbol{I} + \varepsilon \boldsymbol{d} \otimes 
 
 The system is equipped with the boundary conditions
 $$ 
-\begin{aligned}
     \boldsymbol{v} = 0, 
     (\boldsymbol{\Lambda}(\boldsymbol{d}) (\mu \nabla c^{\pm} \pm F c^{\pm} \nabla \psi)) \cdot \boldsymbol{n} = 0, \text{ and } 
     (\boldsymbol{\mathcal{E}}(\boldsymbol{d}) \nabla \psi ) \cdot \boldsymbol{n} = 0 \text{ on } [0,T] \times \partial \Omega.
-\end{aligned}
 $$
 and solved through a linearization and fixed-point iteration in `run_experiment.py`.
 
